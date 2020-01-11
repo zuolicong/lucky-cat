@@ -1,0 +1,2 @@
+# lucky-cat
+investment helper
