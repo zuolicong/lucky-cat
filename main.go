@@ -13,6 +13,6 @@ func init() {
 }
 
 func main() {
-	fmt.Println("Use lucky cat and get your fortune")
+	fmt.Println("Use lucky cat and make your fortune")
 	fund.Process()
 }
