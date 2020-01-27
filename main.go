@@ -5,7 +5,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/zuolicong/lucky-cat/model/fund"
+	"github.com/zuolicong/lucky-cat/model"
+	"github.com/zuolicong/lucky-cat/tui"
 )
 
 func init() {
@@ -13,6 +14,11 @@ func init() {
 }
 
 func main() {
-	fmt.Println("Use lucky cat and make your fortune")
-	fund.Process()
+	fmt.Println("Use lucky cat and make your fortune!")
+	indexInfo, err := model.GetIndexInfo()
+	if err != nil {
+		fmt.Printf("Failed to get index info. err:%s", err.Error())
+	}
+
+	tui.ShowPE(indexInfo)
 }
